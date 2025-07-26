@@ -10,13 +10,13 @@ export class Countercomponent {
 
   counter = signal(0);
   increment(){
-    this.counter.set(this.counter()+1);
+    this.counter.update((value) => value + 1 );
   }
   decrement(){
-     this.counter.set(this.counter()-1);
+     this.counter.update((value) => value - 1 );
   }
   reset(){
-     this.counter.set(0);
+     this.counter.update(() => 0 );
   }
 
 }
