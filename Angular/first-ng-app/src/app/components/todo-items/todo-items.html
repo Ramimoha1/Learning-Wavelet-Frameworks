@@ -4,7 +4,8 @@
 <ul>
     @for (do of todos(); track do.id) {
     <li>
-        <input type="checkbox" (change)="updatecounter($event)" /> <b>{{do.title}}</b>
+        <input type="checkbox" (change)="updatecounter($event)" [checked]="do.completed" />
+         <label>{{do.title}}</label>
     </li>
 }  
 </ul>

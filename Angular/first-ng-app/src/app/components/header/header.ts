@@ -11,5 +11,4 @@ import { RouterLink } from '@angular/router';
 export class Header {
   Title = signal("my first angular app")
 
-
 }

@@ -17,7 +17,7 @@ li {
 
    
 }
- input:checked ~ b{
+ input:checked ~ label{
     color:green;
 }
 

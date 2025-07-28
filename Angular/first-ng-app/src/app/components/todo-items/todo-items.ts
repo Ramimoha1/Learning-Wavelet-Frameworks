@@ -18,11 +18,20 @@ export class TodoItems implements OnInit {
   counter = signal(0)
   total = signal(0)
   ngOnInit():void {
+    var initial = 0
     this.Todoservice.getArrayApi().pipe(catchError((error)=>{console.log(error)
       throw error
     })).subscribe((todolist) => { 
       this.todos.set(todolist)
       this.total.set(todolist.length)
+      for ( const count of todolist)
+      {
+        if(count.completed == true )
+        {
+          initial++
+        }
+      }
+      this.counter.set(initial) 
       
     })
   }
