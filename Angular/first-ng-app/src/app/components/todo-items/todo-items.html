@@ -1,1 +1,3 @@
-<p>todo-items works!</p>
+@for (do of todos(); track do.id) {
+    <p>{{do.title}}</p>
+}

@@ -8,7 +8,6 @@ import { Todos } from '../services/todos';
   imports: [Greetings , Countercomponent],
   templateUrl: './home.html',
   styleUrl: './home.scss',
-  providers: [Todos]
 })
 export class Home {
   message_to_child = signal("hello")

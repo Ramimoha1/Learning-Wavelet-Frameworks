@@ -1,5 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { Todos } from '../../services/todos';
+import { Todo } from '../../Model/to.do.type';
 
 @Component({
   standalone: true ,
@@ -9,9 +10,12 @@ import { Todos } from '../../services/todos';
   styleUrl: './todo-items.scss'
 })
 export class TodoItems implements OnInit {
-  Todoservice = inject(Todos)
+  Todoservice = inject(Todos) ;
+  todos = signal<Array<Todo>>([]) ;
   ngOnInit():void {
     console.log(this.Todoservice.todoitems)
+    this.todos.set(this.Todoservice.todoitems)
+    
   }
 
 }
