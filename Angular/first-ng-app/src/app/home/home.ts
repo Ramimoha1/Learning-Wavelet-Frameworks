@@ -5,14 +5,14 @@ import { Todos } from '../services/todos';
 
 @Component({
   selector: 'app-home',
-  imports: [Greetings , Countercomponent],
+  imports: [Greetings],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home {
   message_to_child = signal("hello")
-  keyUpHandler(event: KeyboardEvent) {
-    console.log(`user typed ${event.key} `);
-  }
+  
+
+  
   
 }

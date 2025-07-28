@@ -1,3 +1,13 @@
-@for (do of todos(); track do.id) {
-    <p>{{do.title}}</p>
-}
+<div>
+<h1> things to do {{count()}}</h1>
+<h5> this list is rendered using rest api</h5>
+<ul>
+    @for (do of todos(); track do.id) {
+    <li>
+        <input type="checkbox" (change)="updatecounter($event)" /> <b>{{do.title}}</b>
+    </li>
+}  
+</ul>
+</div>
+
+

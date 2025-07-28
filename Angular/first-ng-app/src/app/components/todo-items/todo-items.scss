@@ -1,0 +1,25 @@
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+li {
+    font-size: 20px;
+    color:red;
+    list-style-type: none;
+
+   
+}
+ input:checked ~ b{
+    color:green;
+}
+
+
+

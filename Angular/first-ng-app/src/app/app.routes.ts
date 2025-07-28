@@ -14,6 +14,13 @@ export const routes: Routes = [
         loadComponent : () => {
             return import ('./todos/todos').then((m) => m.Todos)
         } ,
+    } ,
+     {
+        path : 'counter',
+        pathMatch :  "full" ,
+        loadComponent : () => {
+            return import ('./counterpage/counterpage').then((m) => m.Counterpage)
+        } ,
     }
 ]
 ;
