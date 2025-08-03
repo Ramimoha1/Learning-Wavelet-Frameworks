@@ -1,14 +1,24 @@
 <div>
 <h1> things to do {{count()}}</h1>
 <h5> this list is rendered using rest api</h5>
-<ul>
-    @for (do of todos(); track do.id) {
-    <li>
-        <input type="checkbox" (change)="updatecounter($event)" [checked]="do.completed" />
-         <label>{{do.title}}</label>
+@if (!loaded()) {<p *ngIf="!loaded()"> Loading ....................</p>}
+@else {
+    <label> filter items :</label>
+    <input type="text" 
+    [(ngModel)]="searchTerm"
+    placeholder="enter filter terms" />
+    <ul >
+    @for (do of todos() |filterTodos : searchTerm(); track do.id ) {
+    <li appHighlightCompletedTodo [isCompleted] = "do.completed">
+        <input type="checkbox" (change)="updatecounter($event , do)" [checked]="do.completed" />
+         <label>{{do.title | uppercase}}</label>
     </li>
 }  
 </ul>
+
+
+    
+}
 </div>
 
 
