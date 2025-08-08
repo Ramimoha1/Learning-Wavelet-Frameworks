@@ -1,0 +1,17 @@
+
+<!-- upload.component.html -->
+<input
+  type="file"
+  accept="image/*"
+  (change)="onFileSelected($event)"
+  hidden
+  #fileInput
+/>
+
+<button (click)="fileInput.click()">Upload Photo</button>
+@if (previewUrl) {
+    <div>
+  <img [src]="previewUrl" alt="Preview" width="200" />
+</div>
+}
+

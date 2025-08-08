@@ -22,5 +22,13 @@ export const routes: Routes = [
             return import ('./counterpage/counterpage').then((m) => m.Counterpage)
         } ,
     }
+    ,
+    {
+        path : 'photos',
+        pathMatch :  "prefix" ,
+        loadComponent : () => {
+            return import ('./photopage/photopage').then((m) => m.Photopage)
+        } ,
+    }
 ]
 ;
