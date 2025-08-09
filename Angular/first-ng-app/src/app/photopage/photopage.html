@@ -1,8 +1,10 @@
 <div class="container">
+<div class="page-head">
 <h3>Add to Gallery</h3>
 <div class="options">
     <button (click)="changeView('upload')">Upload Photo</button>
     <button (click)="changeView('media')">Media Library</button>
+</div>
 </div>
 <app-displayphoto *ngIf ="'media' == view"/>
 <app-uploadphoto *ngIf ="'upload' == view"/>

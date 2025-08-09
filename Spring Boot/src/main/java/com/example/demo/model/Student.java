@@ -1,4 +1,4 @@
-package com.example.demo.Student;
+package com.example.demo.model;
 
 
 
@@ -11,6 +11,7 @@ public class Student {
     private String email;
     private LocalDate dob;
     private int age;
+
 
     public Student(Long id, String name, String email, LocalDate dob, int age) {
         this.id = id;

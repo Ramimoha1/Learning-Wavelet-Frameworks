@@ -1,10 +1,11 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { Uploadphoto } from '../components/uploadphoto/uploadphoto';
 import { Displayphoto } from '../components/displayphoto/displayphoto';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-photopage',
-  imports: [Uploadphoto , Displayphoto],
+  imports: [Uploadphoto , Displayphoto , NgIf],
   templateUrl: './photopage.html',
   styleUrl: './photopage.scss'
 })
