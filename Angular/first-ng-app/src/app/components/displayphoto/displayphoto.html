@@ -1,1 +1,4 @@
-<p>displayphoto works!</p>
+@for (photoy of photo(); track $index) {
+    <p>photo {{$index}} : id {{photoy.id}} </p>
+    <p>photo {{$index}} : file name {{photoy.fileName}} </p>
+}
